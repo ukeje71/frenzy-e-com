@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li{
+    list-style: none;
+}
+a{
+    color: #ccc;
+}
+body{
+    background-color:#ffffffab;
+}
+
+header{
+   width: 100%;
+   border-bottom: 1px solid #ccc;
+   padding-left: 20px;
+
+   .brand-name{
+    -webkit-text-stroke: 2px  #000;
+-webkit-text-fill-color: #fff;
+text-shadow: 4px 5px 5px black;
+font-size: 3em;
+font-family: Arial, sans-serif;
+font-weight: 900;
+position: relative;
+bottom: 15px;
+padding: 25px;
+
+text-align: center;
+   }
+
+   #search{
+    width: 100%;
+  height: fit-content;
+  padding: 10px 25px ;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="grey"><path d="M11 2C15.968 2 20 6.032 20 11C20 15.968 15.968 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2ZM11 18C14.8675 18 18 14.8675 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18ZM19.4853 18.0711L22.3137 20.8995L20.8995 22.3137L18.0711 19.4853L19.4853 18.0711Z"></path></svg>');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: right 10px center;
+   }
+
+   .s-bag{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+   }
+   
+  
+}
+.General-list{
+    background: #fff;
+    position: fixed;
+    top: 8rem;
+    left: 100%;
+    width: calc(100% - 2rem);
+    text-align: center;
+    padding: 3rem 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    transition: 0.3s; 
+  }
+
+  .General-list.active {
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .General-list{
+    margin: 5px 0;
+  }
+
+  .menu-bar {
+    display: block;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+
+  /* menu-bar animation */
+
+  /* make the 2nd bar invisible */
+  .menu-bar.active .bar:nth-child(2) {
+    opacity:0 ;
+  }
+  /* rotate 1st bar */
+  .menu-bar.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  /* rotate 3rd bar */
+  .menu-bar.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #222;
+    margin: 5px auto;
+    border-radius: 1px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:900px) {
+
+    header{
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 90px ;
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+        height: 20vh;
+        row-gap:150px;
+    }
+   
+
+    .search-bar {
+        width: 20rem;
+        height: fit-content;
+        padding: 10px 40px ;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        outline: none;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="grey"><path d="M11 2C15.968 2 20 6.032 20 11C20 15.968 15.968 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2ZM11 18C14.8675 18 18 14.8675 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18ZM19.4853 18.0711L22.3137 20.8995L20.8995 22.3137L18.0711 19.4853L19.4853 18.0711Z"></path></svg>');
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: right 10px center;
+      }
+   .head-cover{
+    display: flex;
+    flex-direction: row;
+   
+   padding: 20px 50px; justify-content: space-between;
+   row-gap: 90px;
+   }
+   .s-bag{
+    display: flex;
+    flex-direction: row;
+   row-gap: 30px;
+   margin: 3px 60px;    
+}
+
+.s-icons{
+display: inline-flex;
+justify-self: end;
+margin-right: 180px;
+position: absolute;
+right: 29px;
+display: flex ;padding-top: -60px;
+margin: 20px 30px;
+align-items: baseline;
+}
+
+
+}
