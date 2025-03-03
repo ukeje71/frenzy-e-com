@@ -9,7 +9,11 @@ li{
     list-style: none;
 }
 a{
-    color: #ccc;
+    color: #111;
+    text-decoration: none;
+}
+a:hover{
+    color:grey;
 }
 body{
     background-color:#ffffffab;
@@ -19,6 +23,7 @@ header{
    width: 100%;
    border-bottom: 1px solid #ccc;
    padding-left: 20px;
+   height: fit-content;
 
    .brand-name{
     -webkit-text-stroke: 2px  #000;
@@ -52,6 +57,7 @@ text-align: center;
     display: flex;
     justify-content: center;
     gap: 15px;
+    
    }
    
   
@@ -59,14 +65,22 @@ text-align: center;
 .General-list{
     background: #fff;
     position: fixed;
-    top: 8rem;
-    left: 100%;
-    width: calc(100% - 2rem);
+    top: 15rem;
+    right: 100%;
+    width: calc(60% - 2rem);
     text-align: center;
-    padding: 3rem 0;
+    padding: 3rem 30px;
     border-radius: 10px;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    box-shadow: 10px 10px 27px rgba(0, 0, 0, 0.05);
     transition: 0.3s; 
+
+
+    .svg{
+        display: inline-flex;
+        flex-direction: row;
+        gap: 20px;
+        padding: 20px;
+    }
   }
 
   .General-list.active {
@@ -81,7 +95,9 @@ text-align: center;
   .menu-bar {
     display: block;
     cursor: pointer;
-    margin-right: 1rem;
+    margin-right: -33rem;
+    margin-top: -30px;
+    position: absolute;
   }
 
   /* menu-bar animation */
@@ -89,6 +105,7 @@ text-align: center;
   /* make the 2nd bar invisible */
   .menu-bar.active .bar:nth-child(2) {
     opacity:0 ;
+    transition: 0.9s ease;
   }
   /* rotate 1st bar */
   .menu-bar.active .bar:nth-child(1) {
@@ -101,13 +118,24 @@ text-align: center;
 
   .bar {
     display: block;
-    width: 25px;
+    width: 35px;
     height: 3px;
     background: #222;
     margin: 5px auto;
     border-radius: 1px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+  }
+
+  .slider-wrapper{
+    padding: 20px 30px;
+
+  }
+  .slide-content{
+    background-color: #000;
+    display: flex;
+    border-radius: 10px;
+    padding: 20px;
   }
 
 
@@ -154,9 +182,7 @@ text-align: center;
    .head-cover{
     display: flex;
     flex-direction: row;
-   
-   padding: 20px 50px; justify-content: space-between;
-   row-gap: 90px;
+   padding: 20px 0px; 
    }
    .s-bag{
     display: flex;
@@ -176,5 +202,18 @@ margin: 20px 30px;
 align-items: baseline;
 }
 
-
+.menu-bar{
+    visibility: hidden;
+}
+.General-list{
+    background: #fff;
+    position: static;
+    top: 0px;
+    left:0px;
+    width: calc(100% - 2rem);
+    text-align: start;
+    padding: 3rem 0;
+    border-radius: 10px;
+    box-shadow: none;
+}
 }
