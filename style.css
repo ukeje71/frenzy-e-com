@@ -40,7 +40,7 @@ text-align: center;
    }
 
    #search{
-    width: 100%;
+     width: 20px;
   height: fit-content;
   padding: 10px 25px ;
   border: 1px solid #ccc;
@@ -51,28 +51,33 @@ text-align: center;
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: right 10px center;
+  transition: 0.6s ease;
    }
 
    .s-bag{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 15px;
     
    }
    
   
 }
+#search:focus{
+  width: 100%;
+}
 .General-list{
     background: #fff;
     position: fixed;
-    top: 15rem;
+    top: 13rem;
     right: 100%;
-    width: calc(60% - 2rem);
+    width: calc(90% - 2rem);
     text-align: center;
     padding: 3rem 30px;
     border-radius: 10px;
-    box-shadow: 10px 10px 27px rgba(0, 0, 0, 0.05);
-    transition: 0.3s; 
+    box-shadow: 0px 30px 47px black;
+    transition: 0.3s ease; 
+    align-items: center;
 
 
     .svg{
@@ -95,8 +100,8 @@ text-align: center;
   .menu-bar {
     display: block;
     cursor: pointer;
-    margin-right: -33rem;
-    margin-top: -30px;
+    margin-left: 3px;
+    margin-top: -70px;
     position: absolute;
   }
 
@@ -128,7 +133,7 @@ text-align: center;
   }
 
   .slider-wrapper{
-    padding: 20px 30px;
+   margin: 10px 10px;
 
   }
   .slide-content{
@@ -136,6 +141,18 @@ text-align: center;
     display: flex;
     border-radius: 10px;
     padding: 20px;
+    width: 98vw;
+  }
+
+  .slides-pic{
+   display: none;
+  }
+  .Home-page-parent-container{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    top: 1px;
+   
   }
 
 
@@ -150,9 +167,7 @@ text-align: center;
 
 
 
-
-
-@media screen and (min-width:900px) {
+@media screen and (min-width:768px) {
 
     header{
         flex-direction: row;
@@ -210,10 +225,32 @@ align-items: baseline;
     position: static;
     top: 0px;
     left:0px;
-    width: calc(100% - 2rem);
+    width: fit-content;
     text-align: start;
     padding: 3rem 0;
-    border-radius: 10px;
+    border-radius: 0px;
     box-shadow: none;
+    border-right: 1px solid grey;
+
+    .flex{
+      padding:0px 20px;
+    }
+
+   #E-com{
+      margin: 0px 20px;
+    }
+}
+.slide-content{
+  width: 69.5vw;
+}
+
+.slides-pic{
+  display: block;
+  width: 19vw;
+  transform: translateY(2px) rotate(-45deg);
+}
+.home{
+  display: flex;
+  flex-direction: row;
 }
 }
