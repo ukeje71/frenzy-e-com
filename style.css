@@ -2,8 +2,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "poppins", sans-serif;
 }
+
+
 
 li{
     list-style: none;
@@ -12,9 +14,7 @@ a{
     color: #111;
     text-decoration: none;
 }
-a:hover{
-    color:grey;
-}
+
 body{
     background-color:#ffffffab;
 }
@@ -32,10 +32,6 @@ text-shadow: 4px 5px 5px black;
 font-size: 3em;
 font-family: Arial, sans-serif;
 font-weight: 900;
-position: relative;
-bottom: 15px;
-padding: 25px;
-
 text-align: center;
    }
 
@@ -75,10 +71,13 @@ text-align: center;
     text-align: center;
     padding: 3rem 30px;
     border-radius: 10px;
-    box-shadow: 0px 30px 47px black;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     transition: 0.3s ease; 
     align-items: center;
 
+    a:hover{
+      color:grey;
+  }
 
     .svg{
         display: inline-flex;
@@ -150,11 +149,35 @@ text-align: center;
   .Home-page-parent-container{
     display: flex;
     flex-direction:row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     top: 1px;
    
   }
 
+  .searcher{
+    margin: 30px;
+
+  .p-searcher{
+    width:30%;
+    height: fit-content;
+    padding: 7px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+    background-image:  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="grey"><path d="M11 2C15.968 2 20 6.032 20 11C20 15.968 15.968 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2ZM11 18C14.8675 18 18 14.8675 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18ZM19.4853 18.0711L22.3137 20.8995L20.8995 22.3137L18.0711 19.4853L19.4853 18.0711Z"></path></svg>');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position:  right  10px center;
+   }
+#p-searcher{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   margin: 20px;
+  }
+
+}
 
 
 
@@ -164,10 +187,7 @@ text-align: center;
 
 
 
-
-
-
-@media screen and (min-width:768px) {
+@media screen and (min-width:820px) {
 
     header{
         flex-direction: row;
@@ -180,20 +200,6 @@ text-align: center;
         row-gap:150px;
     }
    
-
-    .search-bar {
-        width: 20rem;
-        height: fit-content;
-        padding: 10px 40px ;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-        outline: none;
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="grey"><path d="M11 2C15.968 2 20 6.032 20 11C20 15.968 15.968 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2ZM11 18C14.8675 18 18 14.8675 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18ZM19.4853 18.0711L22.3137 20.8995L20.8995 22.3137L18.0711 19.4853L19.4853 18.0711Z"></path></svg>');
-        background-repeat: no-repeat;
-        background-size: 20px;
-        background-position: right 10px center;
-      }
    .head-cover{
     display: flex;
     flex-direction: row;
@@ -240,6 +246,13 @@ align-items: baseline;
       margin: 0px 20px;
     }
 }
+.scrollable-section {
+  width: 300px;
+  height: 200px;
+  overflow-y: scroll; /* Enables scrolling */
+  border: 2px solid black;
+  padding: 10px;
+}
 .slide-content{
   width: 69.5vw;
 }
@@ -252,5 +265,6 @@ align-items: baseline;
 .home{
   display: flex;
   flex-direction: row;
+  margin: 50px;
 }
 }
