@@ -65,9 +65,9 @@ text-align: center;
 .General-list{
     background: #fff;
     position: fixed;
-    top: 13rem;
+    top: 0.5rem;
     right: 100%;
-    width: calc(90% - 2rem);
+    width: calc(95% - 3rem);
     text-align: center;
     padding: 3rem 30px;
     border-radius: 10px;
@@ -132,7 +132,7 @@ text-align: center;
   }
 
   .slider-wrapper{
-   margin: 10px 10px;
+   margin: 12px 2px;
 
   }
   .slide-content{
@@ -177,15 +177,33 @@ text-align: center;
    margin: 20px;
   }
 
+  }
+.Jordan{
+  width: 100%; 
+}
+.products-showcase {
+  display: grid;
+  flex-wrap: wrap;
+  justify-items: center;
+  gap: 20px;
+  background-color:mistyrose;
+ 
+ }
+ .product{ 
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 10px;
+  /* gap: 10rem; */
+  width: 16rem;
+  border-bottom:  4px  solid grey;
+  animation: product 3s ease-in infinite;
 }
 
 
 
 
 
-
-
-
+/*==============================    REPONSIVENESS   =====================================*/
 
 @media screen and (min-width:820px) {
 
@@ -225,6 +243,7 @@ align-items: baseline;
 
 .menu-bar{
     visibility: hidden;
+    display: none;
 }
 .General-list{
     background: #fff;
@@ -262,9 +281,26 @@ align-items: baseline;
   width: 19vw;
   transform: translateY(2px) rotate(-45deg);
 }
+.products-showcase{
+  grid-template-columns: repeat(3, 1fr);
 .home{
   display: flex;
   flex-direction: row;
   margin: 50px;
 }
+
 }
+}
+
+
+
+
+
+
+
+/* Responsive Styles for Tablet Screens */
+@media screen and (min-width: 768px) and (max-width:1004px)
+   {
+     .products-showcase {
+        grid-template-columns: repeat(2, 1fr);}
+     }
