@@ -24,7 +24,9 @@ header{
    border-bottom: 1px solid #ccc;
    padding-left: 20px;
    height: fit-content;
-
+   /* position: sticky;
+   top: 0;
+   z-index: 1000; */
    .brand-name{
     -webkit-text-stroke: 2px  #000;
 -webkit-text-fill-color: #fff;
@@ -36,7 +38,8 @@ text-align: center;
    }
 
    #search{
-     width: 20px;
+    display: flex;
+    max-width: 300px;
   height: fit-content;
   padding: 10px 25px ;
   border: 1px solid #ccc;
@@ -47,7 +50,7 @@ text-align: center;
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: right 10px center;
-  transition: 0.6s ease;
+  transition: 0.6s ease-in-out;
    }
 
    .s-bag{
@@ -59,8 +62,8 @@ text-align: center;
    
   
 }
-#search:focus{
-  width: 100%;
+#search:focus-within{
+  flex-grow: 1;
 }
 .General-list{
     background: #fff;
@@ -69,7 +72,7 @@ text-align: center;
     right: 100%;
     width: calc(95% - 3rem);
     text-align: center;
-    padding: 3rem 30px;
+    line-height: 20px;
     border-radius: 10px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     transition: 0.3s ease; 
@@ -99,9 +102,11 @@ text-align: center;
   .menu-bar {
     display: block;
     cursor: pointer;
-    margin-left: 3px;
+   margin-right: -50px;
     margin-top: -70px;
-    position: absolute;
+    /* position: sticky; */
+    top: 40px;
+    z-index: 1000;
   }
 
   /* menu-bar animation */
@@ -179,24 +184,48 @@ text-align: center;
 
   }
 .Jordan{
-  width: 100%; 
+  width: 100%;
+  border-radius: 10px; 
 }
 .products-showcase {
   display: grid;
   flex-wrap: wrap;
   justify-items: center;
   gap: 20px;
-  background-color:mistyrose;
+
  
  }
- .product{ 
+ .products{ 
   border-radius: 6px;
   background-color: #fff;
-  padding: 10px;
-  /* gap: 10rem; */
-  width: 16rem;
-  border-bottom:  4px  solid grey;
-  animation: product 3s ease-in infinite;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+
+}
+
+footer{
+  background-color: teal;
+  text-align: center;
+  color: #fff;
+padding: 70px 30px;
+line-height: 50px;
+
+  #f-search{
+    border: 2px solid #000;
+    text-align: center;
+    padding: 5px;
+   background-repeat: no-repeat;
+   background-position:   right 10px center ;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="20" fill="currentColor"><path d="M4.96488 5.09625L8.5107 17.5066L11.5514 11.4253L17.188 9.17062L4.96488 5.09625ZM2.89945 2.29958L21.7052 8.56818C21.9672 8.6555 22.1088 8.93866 22.0215 9.20063C21.975 9.34016 21.8694 9.45214 21.7328 9.50676L13.0002 12.9998L8.57501 21.8501C8.45151 22.0971 8.15118 22.1972 7.90419 22.0737C7.77883 22.011 7.68553 21.8986 7.64703 21.7639L2.26058 2.91129C2.18472 2.64577 2.33846 2.36903 2.60398 2.29316C2.70087 2.26548 2.80386 2.26772 2.89945 2.29958Z"></path></svg>');
+  }
+#f-search:invalid{
+border: 2px solid red;
+input-security:red ;
+}
+#f-search:valid{
+  border: 2px solid green;
+}
+ 
 }
 
 
@@ -288,7 +317,10 @@ align-items: baseline;
   flex-direction: row;
   margin: 50px;
 }
-
+}
+footer{
+  display: grid;
+  grid-template-columns:repeat(5,1fr) ;
 }
 }
 
@@ -302,5 +334,9 @@ align-items: baseline;
 @media screen and (min-width: 768px) and (max-width:1004px)
    {
      .products-showcase {
-        grid-template-columns: repeat(2, 1fr);}
+        grid-template-columns: repeat(2, 1fr);
+      }
+      footer{
+        grid-template-columns: repeat(2,1fr);
+      }
      }
