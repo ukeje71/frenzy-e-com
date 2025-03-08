@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frenzy-login-page</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
     <header>
@@ -44,33 +44,38 @@
       </nav>
       </header>
 
-      <!--MAIN  - SEGEMENT-->
-
+      <!--MAIN - SEGEMENT-->
       <main>
-        <!--first - flex-->
-        <section class="login-form">
-            <div class="login-flex1">
-                <span class="login-head">
-                 <h2 class="login-h2">Login</h2>
-                 <p class="login-p">Sign in to your account</p>
-               </span>
-               <form action="#" id="login-f">
-                <input type="text" id="username" placeholder="username" >
-                <input type="password" id="password" placeholder="password">
-                <span  id="btns">
-                  <a href="#" id="forgotten">Forgottten Password?</a>
-                  <button name="Signup" class="Log-btn">Log in</button>
+        <section>
+            <div class="signup-form">
+                <form action="#" class="signs">
+                    <h2 class="signup-h2">Sign up</h2>
+                    <span id="name">
+                        <input id="input" type="text" placeholder="First Name" required>
+                        <input id="input" type="text" placeholder="Last Name" required>
+                    </span>
+                    <input id="input" type="email" placeholder="Email" required>
+                    <input id="input" type="password" placeholder="Password" required>
+                    <input id="input" type="password" placeholder="Confirm  Password" required>
+                    <span >
+                      <input id="checkbox" type="checkbox" name="terms" id="terms">
+                      <label for="checkbox">I accept the terms of Use & Privacy Policy </label required>
                 </span>
-              <span id="sign"><p>Don't have an account ?</p> <a href="sign-up.html" id="s-t">sign up</a></span>
-               </form>
-            </div>
 
-            <!--second - flex-->
-            <div class="login-flex2">
-                <img src="img/Man-wearing-jordans-1.jpg" alt="man wearinng jordans" id="m-inj">
+                <button type="submit" id="sign-btn">Sign up</button>
+                <span class="log">
+                    <p>Already have an account ?</p>
+                    <a href="login.html" id="log"> login here</a>
+                </span>
+                </form>
+
+            <!--Pics-->
+            <div class="pics">
+                <img src="img/Man-wearing-jordans-1.jpg" alt="man in-jordans" id="pic">
             </div>
+        </div>
         </section>
       </main>
-  
+      <script src="script.js"></script>
 </body>
 </html>
